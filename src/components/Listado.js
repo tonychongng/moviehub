@@ -59,7 +59,7 @@ export const Listado = ({listadoState, setListadoState}) => {
           );
         })
         
-        : <h2>"No hay peliculas para mostrar"</h2>
+        : <h2>"No movies to be shown"</h2>
       }
     </>
 
