@@ -30,9 +30,12 @@ export const Crear = ({setListadoState}) => {
         setPeliState(peli);
 
         //ACTUALIZAR EL ESTADO DEL LISTADO PRINCIPAL
-        setListadoState(elementos => {
+        setListadoState((elementos) => {
+            if (elementos === null) {
+              elementos = []; // Initialize as an empty array if null
+            }
             return [...elementos, peli];
-        })
+          });
 
         GuardarEnStorage("pelis", peli);
 
