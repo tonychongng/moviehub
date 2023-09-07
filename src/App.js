@@ -3,7 +3,7 @@ import './App.css';
 import { Listado} from './components/Listado';
 import { Buscador} from './components/Buscador';
 import { Crear} from './components/Crear';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
 
