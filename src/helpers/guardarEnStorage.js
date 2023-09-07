@@ -1,6 +1,6 @@
 export const GuardarEnStorage = (clave, elemento)  => {
     //CONSEGUIR LOS ELEMENTOS QUE TENEMOS EN EL LCOAL STORAGE
-    let elementos = JSON.parse(localStorage.getItem(clave));
+    let elementos = JSON.parse(localStorage.getItem(clave)) || [];
 
     
 
