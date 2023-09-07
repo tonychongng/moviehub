@@ -9,6 +9,29 @@ function App() {
 
     const [listadoState, setListadoState] = useState([]);
 
+    useEffect(() => {
+        // Intentar obtener los datos del localStorage
+        const peliculasEnLocalStorage = JSON.parse(localStorage.getItem('pelis'));
+
+        if (!peliculasEnLocalStorage) {
+        // Si no hay datos en el localStorage, inicializa con un objeto de ejemplo
+        const ejemploPelicula = {
+            id: 1,
+            titulo: 'Spiderman: Homecoming',
+            descripcion: 'A superhero movie',
+        };
+
+        // Agrega el objeto de ejemplo al localStorage
+        localStorage.setItem('pelis', JSON.stringify([ejemploPelicula]));
+
+        // Establece el estado con el objeto de ejemplo
+        setListadoState([ejemploPelicula]);
+        } else {
+        // Si hay datos en el localStorage, establece el estado con esos datos
+        setListadoState(peliculasEnLocalStorage);
+        }
+    }, []);
+
   return (
     <div className="layout">
         {/*CABECERA*/}
