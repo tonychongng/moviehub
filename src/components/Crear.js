@@ -31,9 +31,7 @@ export const Crear = ({setListadoState}) => {
 
         //ACTUALIZAR EL ESTADO DEL LISTADO PRINCIPAL
         setListadoState((elementos) => {
-            if (elementos === null) {
-              elementos = []; // Initialize as an empty array if null
-            }
+            elementos = elementos || []; // Initialize as an empty array if null or undefined
             return [...elementos, peli];
           });
 
