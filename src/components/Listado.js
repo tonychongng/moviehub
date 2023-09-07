@@ -11,7 +11,7 @@ export const Listado = ({listadoState, setListadoState}) => {
 
   const conseguirPeliculas = () => {
     let peliculas = JSON.parse(localStorage.getItem("pelis"));
-
+    peliculas = peliculas || [];
     setListadoState(peliculas);
 
     return peliculas;
@@ -38,7 +38,7 @@ export const Listado = ({listadoState, setListadoState}) => {
               <h3 className="title">{peli.titulo}</h3>
               <p className="description">{peli.descripcion}</p>
 
-              <button className="edit" onClick={() => {setEditar(peli.id);}}>Editar</button>
+              <button className="edit" onClick={() => {setEditar(peli.id);}}>Edit</button>
 
               <button className="delete" onClick={(e) => {eliminarPelicula(e, peli.id)}}>Delete</button>
 
