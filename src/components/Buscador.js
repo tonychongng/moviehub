@@ -32,7 +32,7 @@ export const Buscador = ({listadoState, setListadoState}) => {
     <div className="search">
         <h3>Buscador: {busqueda}</h3>
         {(noEncontrado == true && busqueda.length > 1) && (
-          <span className='no-encontrado'>No se ha encontrado ninguna coincidencia</span>
+          <span className='no-encontrado'>No matches found</span>
 
         )
         }

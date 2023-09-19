@@ -35,7 +35,7 @@ export const Crear = ({ setListadoState }) => {
 
     GuardarEnStorage("pelis", peli);
   };
-
+  
   return (
     <div className="add">
       <h3 className="title">{tituloComponente}</h3>
@@ -43,8 +43,8 @@ export const Crear = ({ setListadoState }) => {
       <strong>{(titulo && descripcion) && "Has creado: " + titulo}</strong>
 
       <form onSubmit={conseguirDatosForm}>
-        <input name="titulo" type="text" placeholder="Titulo" />
-        <textarea name="descripcion" placeholder="Descripción">muy buena</textarea>
+        <input name="titulo" type="text" placeholder="Titulo" defaultValue="Movie's Title"/>
+        <textarea name="descripcion" placeholder="Descripción">Movie's Description</textarea>
 
         <input type="submit" className='editar'/>
       </form>
